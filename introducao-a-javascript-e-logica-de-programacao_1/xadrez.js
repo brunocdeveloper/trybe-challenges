@@ -13,6 +13,8 @@ else if(peca == 'cavalo'){
     console.log('move em direção a vertical e horizontal')
 }else if(peca == 'rei'){
     console.log('pode mover em qualquer direção a sua volta, mas uma casa por vez')
+}else{
+    console.log('peça inválida')
 }
 
 
