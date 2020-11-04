@@ -88,6 +88,24 @@
         divRight.className = 'right-content';
         divMainContent.appendChild(divRight);
 
+        //Exercício 7
+        let image = document.createElement('img');
+        image.src = 'https://picsum.photos/200';
+        divLeft.appendChild(image);
+
+        //Exercício 8
+        let ul = document.createElement('ul'); 
+        let arrayList = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+        for(let index in arrayList){
+            let li  = document.createElement('li');
+            li.innerText = arrayList[index];
+            ul.appendChild(li);
+            divRight.appendChild(ul);
+        }
+       
+
+
+       
     </script>
   </body>
 </html>
