@@ -59,10 +59,9 @@
     <script>
         //Exercício 1
         let body = document.querySelector('body');
-        let title = document.createElement('h1');
-        title.innerText = 'Exercício 5.2 - JavaScript DOM';
-        title.className = 'tile';
-        body.appendChild(title);
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        body.appendChild(h1);
 
         //Exercício 2
         let divMainContent = document.createElement('div');
@@ -106,11 +105,20 @@
         // Exercício9
         for(let i = 0; i < 3; i+=1){
             let h3 = document.createElement('h3');
+            h3.innerText = 'Teste ' + i;
             divMainContent.appendChild(h3);
         }
 
-
-       
+        //Exercícios parte 2.
+        //Exercício 1 - Adicione a classe title na tag h1 criada.
+        h1.className = 'title';
+        
+        //Exercício 2 - Adicione a classe description nas 3 tags h3 criadas.
+        for(let i = 0; i < 3; i+=1){
+            let newClass = document.querySelectorAll('h3');
+            newClass[i].className = 'description';
+        }
+        
     </script>
   </body>
 </html>
