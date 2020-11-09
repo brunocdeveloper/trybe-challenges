@@ -12,7 +12,7 @@ function createDaysOfTheWeek() {
 }
 createDaysOfTheWeek()
 
-    function daysWeek(){
+function daysWeek(){
     const daysWeek = document.querySelector('#days')
     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
     for(let index = 0; index < dezDaysList.length; index +=1){
@@ -28,4 +28,13 @@ createDaysOfTheWeek()
     }
 }
 daysWeek();
- 
+
+function holidays(string){
+    const btnContainer = document.querySelector('.buttons-container');
+    const btnHoliday = document.createElement('button');
+    btnHoliday.id = 'btn-holiday';
+    btnHoliday.innerText = string;
+    btnContainer.appendChild(btnHoliday);
+}
+
+holidays('Feriados');
