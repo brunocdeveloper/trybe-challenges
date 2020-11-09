@@ -38,3 +38,19 @@ function holidays(string){
 }
 
 holidays('Feriados');
+
+function colorsHolidays(){
+    const btnHoliday = document.querySelector('.buttons-container');
+    const holidays = document.querySelectorAll('.holiday');
+
+    for(let index = 0; index < holidays.length; index +=1){
+        if(holidays[index].style.backgroundColor == 'green'){
+            holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+        }else{
+            holidays[index].style.backgroundColor = 'green';
+        }
+    } 
+    btnHoliday.addEventListener('click', colorsHolidays); 
+}
+
+colorsHolidays();
