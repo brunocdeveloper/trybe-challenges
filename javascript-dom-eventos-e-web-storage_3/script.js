@@ -12,9 +12,10 @@ function createDaysOfTheWeek() {
 }
 createDaysOfTheWeek()
 
+//Exercício 1 - Cria cada dia do calendário de forma dinâmica e adiciona como filhas da tag <ul> com id 'days'.
 function daysWeek(){
-    const daysWeek = document.querySelector('#days')
-    const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
+    let daysWeek = document.querySelector('#days')
+    let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
     for(let index = 0; index < dezDaysList.length; index +=1){
         let li = document.createElement('li');
         li.className = 'day';
@@ -29,9 +30,11 @@ function daysWeek(){
 }
 daysWeek();
 
-function holidays(string){
-    const btnContainer = document.querySelector('.buttons-container');
-    const btnHoliday = document.createElement('button');
+//Exercício 2 - Cria o botão feriado e adiciona id a ele. 
+
+function holidays(string){    
+    let btnContainer = document.querySelector('.buttons-container');
+    let btnHoliday = document.createElement('button');
     btnHoliday.id = 'btn-holiday';
     btnHoliday.innerText = string;
     btnContainer.appendChild(btnHoliday);
@@ -39,9 +42,10 @@ function holidays(string){
 
 holidays('Feriados');
 
+//Exercício 3 - Adiciona função de alterar cor dos feriados ao botão criado no exercício 3.
 function colorsHolidays(){
-    const btnHoliday = document.querySelector('.buttons-container');
-    const holidays = document.querySelectorAll('.holiday');
+    let btnHoliday = document.querySelector('#btn-holiday');
+    let holidays = document.querySelectorAll('.holiday');
 
     for(let index = 0; index < holidays.length; index +=1){
         if(holidays[index].style.backgroundColor == 'green'){
@@ -50,7 +54,33 @@ function colorsHolidays(){
             holidays[index].style.backgroundColor = 'green';
         }
     } 
-    btnHoliday.addEventListener('click', colorsHolidays); 
+    btnHoliday.addEventListener('click', colorsHolidays);
 }
 
 colorsHolidays();
+
+//Exercício 4 - Cria um botão "Sexta-Feira" dinâmicamente.
+function createBtnFriday(friday){
+    let btnFriday = document.createElement('button');
+    btnFriday.id = 'btn-friday';
+    btnFriday.innerText = friday;
+    document.querySelector('.buttons-container').appendChild(btnFriday);
+}
+
+createBtnFriday('Sexta-feira');
+
+//Exercício 5 - Adiciona evento que altera o texto exibido nos dias que são sexta-feira.
+function eventFriday(){
+    let btnFriday = document.querySelector('#btn-friday');
+    let fridays = document.querySelectorAll('.friday');
+    let arrayDays = [4, 12, 19, 26];
+    for(let index = 0; index < fridays.length; index +=1){
+        if(fridays[index].innerText === 'Sexta-feira'){
+            fridays[index].innerText = arrayDays[index];
+        }else{
+            fridays[index].innerText = 'Sexta-feira';
+        }
+    }
+    btnFriday.addEventListener('click', eventFriday);
+}
+eventFriday();
