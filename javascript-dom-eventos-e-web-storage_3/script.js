@@ -88,6 +88,7 @@ eventFriday();
 //Exercício 6 - Adiciona efeito de zoom ao passar o mouse sobre os dias do calendário. 
 let daysZoom = document.querySelector('#days')
 function zoomUP (){
+    
     daysZoom.addEventListener('mouseover', function(e){
         e.target.style.fontSize = '30px';
     });
@@ -121,9 +122,9 @@ function toDoColor (string) {
     divTasks.appendChild(div);
 }
 
-toDoColor('black');
+toDoColor('grey');
 
-//Exercício 9 - 
+//Exercício 9 - Adiciona a class selected quando a div de legenda é clicada.
 function selectedDiv(){
     let div = document.querySelector('.task')
     div.addEventListener('click', function(e){
@@ -136,3 +137,18 @@ function selectedDiv(){
 }
 
 selectedDiv();
+
+//Exercício 10 - Adiciona função ao clicar no dia do calendário, o fundo muda com a mesma cor da legenda da tarefa.
+function colorDays(){
+    let days = document.querySelector('#days');
+    let div = document.querySelector('.task');
+    let colorful = div.style.backgroundColor;
+    days.addEventListener('click', function(e){
+        if(e.target.style.backgroundColor !== colorful){
+            e.target.style.backgroundColor = colorful;
+        }else{
+            e.target.style.backgroundColor = "rgb(119,119,119)";
+        }
+    })
+}
+colorDays();
