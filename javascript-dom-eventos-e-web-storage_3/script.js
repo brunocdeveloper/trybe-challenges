@@ -1,4 +1,4 @@
-function createDaysOfTheWeek() {
+function createDaysOfTheWeek () {
     const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
     const weekDaysList = document.querySelector('.week-days');
   
@@ -13,7 +13,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek()
 
 //Exercício 1 - Cria cada dia do calendário de forma dinâmica e adiciona como filhas da tag <ul> com id 'days'.
-function daysWeek(){
+function daysWeek () {
     let daysWeek = document.querySelector('#days')
     let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
     for(let index = 0; index < dezDaysList.length; index +=1){
@@ -32,7 +32,7 @@ daysWeek();
 
 //Exercício 2 - Cria o botão feriado e adiciona id a ele. 
 
-function holidays(string){    
+function holidays (string) {    
     let btnContainer = document.querySelector('.buttons-container');
     let btnHoliday = document.createElement('button');
     btnHoliday.id = 'btn-holiday';
@@ -43,7 +43,7 @@ function holidays(string){
 holidays('Feriados');
 
 //Exercício 3 - Adiciona função de alterar cor dos feriados ao botão criado no exercício 3.
-function colorsHolidays(){
+function colorsHolidays () {
     let btnHoliday = document.querySelector('#btn-holiday');
     let holidays = document.querySelectorAll('.holiday');
 
@@ -60,7 +60,7 @@ function colorsHolidays(){
 colorsHolidays();
 
 //Exercício 4 - Cria um botão "Sexta-Feira" dinâmicamente.
-function createBtnFriday(friday){
+function createBtnFriday (friday) {
     let btnFriday = document.createElement('button');
     btnFriday.id = 'btn-friday';
     btnFriday.innerText = friday;
@@ -70,7 +70,7 @@ function createBtnFriday(friday){
 createBtnFriday('Sexta-feira');
 
 //Exercício 5 - Adiciona evento que altera o texto exibido nos dias que são sexta-feira.
-function eventFriday(){
+function eventFriday () {
     let btnFriday = document.querySelector('#btn-friday');
     let fridays = document.querySelectorAll('.friday');
     let arrayDays = [4, 12, 19, 26];
@@ -87,27 +87,68 @@ eventFriday();
 
 //Exercício 6 - Adiciona efeito de zoom ao passar o mouse sobre os dias do calendário. 
 let daysZoom = document.querySelector('#days')
-function zoomUP(){
+function zoomUP (){
+    
     daysZoom.addEventListener('mouseover', function(e){
         e.target.style.fontSize = '30px';
     });
 }
 
-function zoomDown(){
+function zoomDown () {
     daysZoom.addEventListener('mouseout', function(e){
         e.target.style.fontSize = '20px';
     });
 }
 
-
 zoomUP();
 zoomDown();
 
 //Exercício 7 - Implementa função que adiciona tarefa personalizada ao calendário.
-function toDo(string){
+function toDo (string) {
     let divTasks = document.querySelector('.my-tasks');
     let span = document.createElement('span');
     span.innerText = string;
     divTasks.appendChild(span);
 }
+
 toDo('Estudar');
+
+//Exercício 8 - Adiciona cor para as tarefas criadas no exercício anterior.
+function toDoColor (string) {
+    let divTasks = document.querySelector('.my-tasks');
+    let div = document.createElement('div');
+    div.className = 'task';
+    div.style.backgroundColor = string;
+    divTasks.appendChild(div);
+}
+
+toDoColor('grey');
+
+//Exercício 9 - Adiciona a class selected quando a div de legenda é clicada.
+function selectedDiv(){
+    let div = document.querySelector('.task')
+    div.addEventListener('click', function(e){
+        if(div.className == 'task'){
+        e.target.className = 'task selected'
+        }else{
+            e.target.className = 'task'
+        }
+    })
+}
+
+selectedDiv();
+
+//Exercício 10 - Adiciona função ao clicar no dia do calendário, o fundo muda com a mesma cor da legenda da tarefa.
+function colorDays(){
+    let days = document.querySelector('#days');
+    let div = document.querySelector('.task');
+    let colorful = div.style.backgroundColor;
+    days.addEventListener('click', function(e){
+        if(e.target.style.backgroundColor !== colorful){
+            e.target.style.backgroundColor = colorful;
+        }else{
+            e.target.style.backgroundColor = "rgb(119,119,119)";
+        }
+    })
+}
+colorDays();
