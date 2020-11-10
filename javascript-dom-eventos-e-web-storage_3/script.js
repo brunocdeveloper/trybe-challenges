@@ -84,3 +84,30 @@ function eventFriday(){
     btnFriday.addEventListener('click', eventFriday);
 }
 eventFriday();
+
+//Exercício 6 - Adiciona efeito de zoom ao passar o mouse sobre os dias do calendário. 
+let daysZoom = document.querySelector('#days')
+function zoomUP(){
+    daysZoom.addEventListener('mouseover', function(e){
+        e.target.style.fontSize = '30px';
+    });
+}
+
+function zoomDown(){
+    daysZoom.addEventListener('mouseout', function(e){
+        e.target.style.fontSize = '20px';
+    });
+}
+
+
+zoomUP();
+zoomDown();
+
+//Exercício 7 - Implementa função que adiciona tarefa personalizada ao calendário.
+function toDo(string){
+    let divTasks = document.querySelector('.my-tasks');
+    let span = document.createElement('span');
+    span.innerText = string;
+    divTasks.appendChild(span);
+}
+toDo('Estudar');
