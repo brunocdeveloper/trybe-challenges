@@ -122,3 +122,17 @@ function toDoColor (string) {
 }
 
 toDoColor('black');
+
+//Exercício 9 - 
+function selectedDiv(){
+    let div = document.querySelector('.task')
+    div.addEventListener('click', function(e){
+        if(div.className == 'task'){
+        e.target.className = 'task selected'
+        }else{
+            e.target.className = 'task'
+        }
+    })
+}
+
+selectedDiv();
