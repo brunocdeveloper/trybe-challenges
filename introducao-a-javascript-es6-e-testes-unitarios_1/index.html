@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco 7_2</title>
+</head>
+<body>
+    <button type="button" id="contador">contador de clicks</button>
+    <section id="recebeContagem"></section>
+
+    <script>
+        const mensagem = document.querySelector('#recebeContagem');
+        const clickCount = document.querySelector('#contador');
+        const p = document.createElement('p');
+
+        let numeros = 0;
+        clickCount.addEventListener('click', () => {
+            numeros +=1;
+            p.innerText = `Você clicou ${numeros} vezes no botão`;
+            mensagem.appendChild(p);
+        });    
+    </script>
+</body>
+</html>
