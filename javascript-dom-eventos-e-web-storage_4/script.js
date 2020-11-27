@@ -53,9 +53,7 @@ function altura(valor) {
     localStorage.setItem('altura', valor)
 }
 
-//
-
-
+//Altera a fonte da página.
 fontFamily.addEventListener('change', function (event) {
     font(event.target.value);
 });
