@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Dados Pessoais</h1>
+    <fieldset>
+        <label for="name" id="labelName">Nome</label>
+        <input type="text" id="name" maxlength="40" required>
+        <label for="cpf" id="labelCpf">CPF</label>
+        <input type="text" id="cpf"maxlength="11" required><br><br>
+        <label for="email" id="labelEmail">Email</label>
+        <input type="text" id="email" maxlength="50" required><br><br> 
+        <label for="endereco" id="labelEndereco">Endereço</label>
+        <input type="text" id="endereco" required><br><br>
+        <label for="cidade" id="labelCidade">Cidade</label>
+        <input type="text" id ="cidade" maxlength="28" required><br><br>
+        <div id="divEstado">
+            <label for="selectEstados" id="labelEstado">Estado</label>
+            <select name="estado" id="selectEstados" required>
+            </select><br><br>
+            <input type="radio" id="labelCasa" name="moradia" required>
+            <label for="labelCasa" id="casa">Casa</label><br>
+            <input type="radio" id="labelApartamento" name="moradia" required>
+            <label for="labelApartamento" id="apartamento">Apartamento</label>
+        </div>
+    </fieldset><br>
+    <fieldset>
+    <h2>Histórico Profissional</h2>
+    <label for="empresa" id="labelEmpresa">Empresa</label>
+    <input type="text" id="empresa"><br><br>
+    <label for="cargo" id="labelCargo">Cargo</label>
+    <input type="text" id="cargo"><br><br>
+    <label for="dataInicio" id="dataI">Data de início</label>
+    <input type="date" id="dataInicio" required><br><br>
+    <label for="dataTermino" id="dataT">Data de término</label>
+    <input type="date" id="dataTermino" required><br><br><br>
+    <textarea id="textArea" maxlength="1000" cols="38" rows="12" required placeholder="Descreva aqui, as atividades do seu último emprego"></textarea>
+    </fieldset><br>
+    <button type="submit" id="btnSubmit">Enviar</button>
+    <div>
+        <p id="imprimirName"></p>
+        <p id="imprimirEmail"></p>
+        <p id="imprimirEndereco"></p>
+        <p id="imprimirCidade"></p>
+        <p id="imprimirCPF"></p>
+        <p id="imprimirEstado"></p>
+        <p id="imprimirEmpresa"></p>
+        <p id="imprimirCargo"></p>
+    </div> 
+    <script src="script.js"></script>  
+</body>
+</html>
