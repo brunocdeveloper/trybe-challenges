@@ -1,0 +1,79 @@
+body{
+    background-color: #edf6f9;
+    margin-top: 50px;
+}
+
+h1{
+    display: inline;
+    margin-left: 25%;
+    background-color: #f7fff7;
+    font-size: 45px;
+    padding: 10px;
+    
+}
+
+h2{
+    margin-top: 10%;
+    max-width: 30%;
+    display: block;
+}
+
+
+
+#menu li{
+    margin-top: 50px;
+    float: left;
+    margin-left: 150px;
+    list-style-type: none;
+    display: block;
+    max-width: 30%;
+}
+
+#menu{
+    margin-left: 30%;
+    
+}
+
+#image1{
+    width: 350px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#articleone{
+    margin-top: 35px;
+    line-height: 25px;
+    max-width: 900px;;
+}
+
+#biology{
+    float: right;
+    line-height: 25px;
+    
+}
+
+
+#image2{
+    width: 350px;
+    left: 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+#articletwo{
+    display: inline-block;
+    max-width: 700px;
+    line-height: 25px;
+}
+
+#image3{
+    width: 350px;
+    float: left;
+    margin-right: 10px;
+}
+
+#articlethree{
+    max-width: 900px;;
+    line-height: 20px;
+}

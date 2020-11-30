@@ -1,0 +1,23 @@
+body {
+  background-color: yellow;
+}
+
+.tamanhoArtigo{
+    width: 600px;
+    font-size: 24px;
+    background-color: white;
+    margin: 15px;
+    padding: 50px;
+    text-align: justify;
+}
+
+main article {
+    margin: 20px;
+}
+
+.mainContent {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   
+}
+
