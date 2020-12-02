@@ -2,22 +2,60 @@ body {
   background-color: yellow;
 }
 
-.tamanhoArtigo{
-    width: 600px;
-    font-size: 24px;
-    background-color: white;
-    margin: 15px;
-    padding: 50px;
-    text-align: justify;
-}
-
-main article {
-    margin: 20px;
-}
-
 .mainContent {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px;
+  justify-content: center;
 }
 
+.tamanhoArtigo {
+  width: 800px;
+  margin: 50px;
+  background-color: white;
+  padding: 60px;
+}
+
+.subTitle {
+  font-size: 10px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.corDeFundo {
+  padding: 5px 6px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 600;
+}
+
+.btnColorText {
+  padding: 5px 6px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 600;
+}
+
+.btnTamanho {
+  padding: 5px 6px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 600;
+}
+
+.alturaLinhas {
+  padding: 5px 6px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 600;
+}
+
+.fontFamily {
+  padding: 5px 6px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 600;
+}
