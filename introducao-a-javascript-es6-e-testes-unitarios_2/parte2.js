@@ -52,4 +52,11 @@ const contaEstudantes = () => {
     let lesson3 = Object.values(allLessons.lesson3)[1]
     console.log(lesson1 + lesson2 + lesson3)
 }
+
 contaEstudantes();
+
+const valorChave = (objeto, posicao) => {
+    console.log(Object.values(objeto)[posicao])
+}
+
+valorChave(lesson2, 2)
