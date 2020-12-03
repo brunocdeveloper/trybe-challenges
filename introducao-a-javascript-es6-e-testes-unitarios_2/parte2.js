@@ -55,8 +55,15 @@ const contaEstudantes = () => {
 
 contaEstudantes();
 
-const valorChave = (objeto, posicao) => {
-    console.log(Object.values(objeto)[posicao])
+const encontraPar = (objeto, chave, valor) => {
+    const pares = Object.entries(objeto)
+    let retorno = false;
+    for (index in pares) {
+        if (pares[index][0] === chave && pares[index][1] === valor) {
+            retorno = true;
+        }
+    }
+    console.log(retorno)
 }
 
-valorChave(lesson2, 2)
+encontraPar(lesson2, "materia", "História")
