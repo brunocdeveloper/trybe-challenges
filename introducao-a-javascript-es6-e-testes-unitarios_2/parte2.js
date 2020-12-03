@@ -19,7 +19,13 @@ const lesson1 = {
   };
 
 const adicionaTurno = (objeto, chave, valor) => {
-    objeto[chave]= valor;
+    objeto[chave] = valor;
 }
+
 adicionaTurno(lesson2, "turno", "manhã");
-console.log(lesson3);
+
+const listarKeys = (objeto) => {
+    console.log(Object.keys(objeto));
+}
+
+listarKeys(lesson3);
