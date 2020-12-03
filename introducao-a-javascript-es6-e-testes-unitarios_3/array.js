@@ -22,4 +22,3 @@ assert.deepStrictEqual(myRemove(arrayInicial), arrayInicial, 'Array foi alterado
 
 //Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
 assert.deepStrictEqual(myRemove(arrayInicial, 5), arrayInicial)
-
