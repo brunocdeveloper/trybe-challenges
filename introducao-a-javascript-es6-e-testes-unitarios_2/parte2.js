@@ -45,3 +45,11 @@ listarValores(lesson3)
 
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3} );
 console.log(allLessons)
+
+const contaEstudantes = () => {
+    let lesson1 = Object.values(allLessons.lesson1)[1]
+    let lesson2 = Object.values(allLessons.lesson2)[1]
+    let lesson3 = Object.values(allLessons.lesson3)[1]
+    console.log(lesson1 + lesson2 + lesson3)
+}
+contaEstudantes();
