@@ -39,13 +39,12 @@ const order = {
     telefone: ${order.phoneNumber}, ${order.address.street},Nº${order.address.number}, AP:${order.address.apartment}.`)
   }
 
-
-
   customerInfo(order);
   
   const orderModifier = (order) => {
-    // Adicione abaixo as informações necessárias.
-  
+    order.name = "Luiz Silva";
+    console.log(`Olá ${order.name}, o total do seu pedido de ${Object.keys(order.order.pizza)[0]}, ${Object.keys(order.order.pizza)[1]}, ${Object.values(order.order.drinks.coke)[0]} é R$${order.payment = "50,00"}`)
+    
   }
   
   orderModifier(order);
