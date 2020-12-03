@@ -35,3 +35,9 @@ const tamanhoObjeto = (objeto) => {
 }
 
 tamanhoObjeto(lesson3);
+
+const listarValores = (objeto) => {
+    console.log(Object.values(objeto))
+}
+
+listarValores(lesson3)
