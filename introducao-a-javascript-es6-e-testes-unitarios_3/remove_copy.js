@@ -8,7 +8,6 @@ function myRemoveWithoutCopy(arr, item) {
       len -= 1;
     }
   }
-
   return arr;
 }
 
