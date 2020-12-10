@@ -1,3 +1,4 @@
+//Escreva a função addOne para passar nos testes já implementados.
 const assert = require('assert');
 
 const addOne = (parametro) => {
