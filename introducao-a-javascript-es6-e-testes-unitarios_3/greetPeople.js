@@ -8,7 +8,6 @@ const greetPeople = (people) => {
     return greeting;
 };
 
-
 const parameter = ['Irina', 'Ashleigh', 'Elsa'];
 const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
 
@@ -16,7 +15,6 @@ const output = greetPeople(parameter);
 assert.deepStrictEqual(output, result)
 
 
-//const output = greetPeople(parameter);
-//assert.deepStrictEqual(output, result);
+
 
 
