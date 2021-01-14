@@ -1,4 +1,5 @@
-const getUserName = require('./findUserById')
+// Verifica se o retorno para quando encontra o úsuario ou não é o esperado.
+const getUserName = require('./getUserName')
 
 it('Verifica o retorno para quando o usuário é encontrado', () => {
     expect.assertions(1);
@@ -8,5 +9,5 @@ it('Verifica o retorno para quando o usuário é encontrado', () => {
 it('Verifica o retorno para quando o usuário não é encontrado', () => {
     expect.assertions(1);
     return getUserName(2).catch(error => 
-        expect(error).toEqual({ error: 'User with 2 not found.' }))
+      expect(error).toEqual({ error: 'User with 2 not found.' }))
 })
