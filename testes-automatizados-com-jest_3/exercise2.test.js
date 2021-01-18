@@ -20,5 +20,4 @@ function generateNumber() {
     generateNumber.mockImplementation((a, b) => a / b);
     generateNumber(10, 5);
     expect(generateNumber(10, 5)).toBe(2);
-
  });
