@@ -17,23 +17,25 @@ function concat(stringOne, stringTwo) {
     return `${stringOne}${stringTwo}`
 }
 
-it('Testa a função upperCase e seus retornos', () => {
-    upperCase = jest.fn()
-
-    upperCase.mockImplementation((string => string.toLowerCase()))
-    expect(upperCase('BRUNO')).toBe('bruno');
-})
-
-it('testa a função firstLetter e seu retorno', () => {
-    firstLetter = jest.fn();
-
-    firstLetter.mockImplementation((string) => string.substr(string.length -1))
-    expect(firstLetter('bruno')).toBe('o')
-})
-
-it('testa a função concat e seu retorno', () => {
-    concat = jest.fn();
-
-    concat.mockImplementation((stringOne, stringTwo, stringThree) => `${stringOne}${stringTwo}${stringThree}`);
-    expect(concat('Bruno', 'Candido', 'Morais')).toBe('BrunoCandidoMorais')
+describe('Testa as funções upperCase, firstLetter e concat para validar seus retornos', () => {
+    it('Testa a função upperCase e seus retornos', () => {
+        upperCase = jest.fn()
+    
+        upperCase.mockImplementation((string => string.toLowerCase()))
+        expect(upperCase('BRUNO')).toBe('bruno');
+    })
+    
+    it('testa a função firstLetter e seu retorno', () => {
+        firstLetter = jest.fn();
+    
+        firstLetter.mockImplementation((string) => string.substr(string.length -1))
+        expect(firstLetter('bruno')).toBe('o')
+    })
+    
+    it('testa a função concat e seu retorno', () => {
+        concat = jest.fn();
+    
+        concat.mockImplementation((stringOne, stringTwo, stringThree) => `${stringOne}${stringTwo}${stringThree}`);
+        expect(concat('Bruno', 'Candido', 'Morais')).toBe('BrunoCandidoMorais')
+    })
 })
