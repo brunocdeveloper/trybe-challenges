@@ -15,4 +15,4 @@ it('Testando os retornos e chamada da função', () => {
    expect(generateNumber).toHaveBeenCalled();
    expect(generateNumber()).toBe(10);
    expect(generateNumber).toHaveBeenCalledTimes(2)
-})
+});
