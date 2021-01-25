@@ -1,0 +1,17 @@
+.topic {
+  display: block;
+  font-size: 24px;
+  margin: 50px 50px 25px 50px;
+}
+
+.styleBtn {
+  margin: 12px 10px;
+  padding: 5px 15px;
+  background-color: pink;
+  border-style: none;
+}
+
+.container {
+  display: inline;
+  margin-left: 15px;
+}
