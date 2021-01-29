@@ -1,0 +1,19 @@
+.body {
+  margin: 0px;
+}
+
+.style-btn {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: 130px;
+}
+
+.style-btn-count {
+  display: block;
+  margin-top: 15px;
+  margin-left: 180px;
+}
+
+.text {
+  margin-left: 50px;
+}
