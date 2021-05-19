@@ -9,9 +9,13 @@ export default class App extends Component {
   }
 
   alternate = () => {
-    this.setState({
-      description: this.state.description ? "The state is where we store data for our components" : "This is a state test"
-    })
+    const { description } = this.state
+    if (description == "This is a state test") {
+      this.setState({
+        description: "This is state"
+      })
+    } else this.setState({ description: "This is a state test" })
+    
   }
 
   sumClicks = () => {
