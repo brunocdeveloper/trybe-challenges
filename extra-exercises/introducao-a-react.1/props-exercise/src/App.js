@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Ingredientes from './Ingredientes';
 
 import PageWithComponents from './PageWithComponents'
 
