@@ -1,0 +1,7 @@
+SELECT
+	MAX(SALARY),
+	MIN(SALARY),
+	SUM(SALARY),
+    ROUND(AVG(SALARY), 2)
+	FROM hr.employees;
+    
