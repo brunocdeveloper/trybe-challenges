@@ -1,18 +1,13 @@
 USE sakila;
-
 DELIMITER $$
 
-CREATE PROCEDURE PesquisaSN(IN emailC VARCHAR(100), OUT validate BOOL)
+CREATE PROCEDURE VerificaClientesAtivos(IN emailcliente VARCHAR(100), OUT atividade BOOL)
 BEGIN 
-	SELECT active INTO validate
-    FROM customer
-    WHERE emailC = email;
-END $$;
-
+	SELECT active FROM customer
+    WHERE emailcliente = email
+	INTO atividade;
+END $$
 DELIMITER ;
 
-CALL PesquisaAtivoOuNao('MARY.SMITH@sakilacustomer.org', @validacao);
-SELECT @validacao;
-
-
-   
+CALL VerificaClientesAtivos('MARY.SMITH@sakilacustomer.org', @atividade);
+SELECT @atividade;

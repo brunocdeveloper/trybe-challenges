@@ -1,20 +1,19 @@
 USE sakila;
 DELIMITER $$
 
-CREATE PROCEDURE FindMovieByCategory(IN category VARCHAR(100))
+CREATE PROCEDURE PesquisaPorCategoria(IN categoria VARCHAR(50))
 BEGIN
-    SELECT f.film_id, f.title, fc.category_id, c.name
-    FROM sakila.film f
-    INNER JOIN sakila.film_category fc ON f.film_id = fc.film_id
-    INNER JOIN sakila.category c ON c.category_id = fc.category_id
-    WHERE c.name = category;
+	SELECT film.film_id, film.title,
+	 filmCategory.film_id,
+	 filmCategory.category_id,
+	 category.category_id,
+	 category.name
+	FROM film AS film
+	INNER JOIN film_category AS filmCategory ON filmCategory.film_id = film.film_id
+	INNER JOIN category AS category ON category.category_id = filmCategory.category_id
+	WHERE category.name = categoria;
 END $$
 
 DELIMITER ;
 
-
-CALL FindMovieByCategory('Action');
-
-
-
-   
+CALL PesquisaPorCategoria('Drama');
