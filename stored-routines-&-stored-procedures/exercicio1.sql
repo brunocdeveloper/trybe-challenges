@@ -1,15 +1,13 @@
 USE sakila;
 DELIMITER $$
 
-CREATE PROCEDURE MostrarTop10Atores()
-BEGIN 
-	SELECT actor_id, COUNT(*) AS 'Quantidade de filmes'
-    FROM film_actor
-    GROUP BY actor_id
-    ORDER BY COUNT(*) DESC
+CREATE PROCEDURE ObterAtoresPopulares()
+BEGIN
+	SELECT actor_id, COUNT(*) AS contagem FROM film_actor
+	GROUP BY actor_id
+    ORDER BY contagem DESC
     LIMIT 10;
-END $$
-
+END$$
 DELIMITER ;
 
-CALL MostrarTop10Atores();
+CALL obterAtoresPopulares();
