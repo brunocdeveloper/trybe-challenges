@@ -1,0 +1,6 @@
+db.restaurants.find({
+  $and: [
+    { rating: { $ne: 1}},
+    { cuisine: { $ne: 'American'}}
+  ]
+})
