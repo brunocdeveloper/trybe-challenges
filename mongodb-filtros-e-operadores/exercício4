@@ -1,0 +1,2 @@
+ db.restaurants.find({ rating: { $lte: 4}}).count()
+
