@@ -1,0 +1,8 @@
+use("class");
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: { "cast.$[elemento].actor": "Michael Caine" }
+  },
+  { arrayFilters: [{ "elemento.character": "Alfred"}]}
+);
