@@ -1,0 +1,10 @@
+use("class");
+db.movies.find(
+  { 
+    $or: [
+      { ratings: { $elemMatch: { $gt: 199 } } },
+      { category: { $all: ["sci-fi"] } }
+    ]
+  },
+  { _id: 0, title: 1, ratings: 1, category: 1 }
+).pretty();
