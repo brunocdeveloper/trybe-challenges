@@ -1,0 +1,10 @@
+use('agg_example');
+db.transactions.aggregate([
+  {
+    $group: {
+      _id: "$bank",
+      value: { $sum: "$value" },
+      count: { $sum: 1 }
+    }
+  }
+])
