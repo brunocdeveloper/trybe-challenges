@@ -1,0 +1,19 @@
+use('agg_example');
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { nome: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$$nome", "$from"],
+            }
+          }
+        }
+      ],
+      as: 'ClientesEtransacoes'
+    }
+  }
+]);
