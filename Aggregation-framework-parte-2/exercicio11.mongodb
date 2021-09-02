@@ -1,0 +1,17 @@
+use('storage');
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      new_price: {
+    $subtract: [
+          "$sale_price", {
+    $multiply: [{ $divide: [50, 100] }, "$sale_price"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]);
