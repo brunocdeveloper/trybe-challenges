@@ -1,9 +1,11 @@
-const PESO_70KG = 70;
-const ALTURA_1M_75CM = 1.75;
+const readline = require('readline-sync');
+
+const peso = readline.questionInt('Qual o seu peso ?: ');
+const altura = readline.questionFloat('Qual a sua altura ?: ');
 
 function calculaImc() {
-  console.log(`Peso: ${PESO_70KG}, Altura: ${ALTURA_1M_75CM}`);
-  const imc = ( PESO_70KG / Math.pow(ALTURA_1M_75CM, 2)).toFixed(2);
+  console.log(`Peso: ${peso}, Altura: ${altura}`);
+  const imc = ( peso / Math.pow(altura, 2)).toFixed(2);
   console.log(`IMC: ${imc}`)
 }
 
