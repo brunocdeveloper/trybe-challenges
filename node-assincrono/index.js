@@ -14,6 +14,18 @@ function calculoMatematico(a, b, c) {
   })
 }
 
+calculoMatematico(15, 15 , 2)
+  .then(resolve => console.log(resolve))
+  .catch(error => console.log(error))
+
+calculoMatematico(15, 't', 2)
+  .then(resolve => console.log(resolve))
+  .catch(error => console.log(error))
+
+calculoMatematico(1, 1, 1)
+  .then(resolve => console.log(resolve))
+  .catch(error => console.log(error))
+
 function geradorNumerico() {
   return Math.floor(Math.random() * 100 + 1)
 }
