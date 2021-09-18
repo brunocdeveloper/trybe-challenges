@@ -1,0 +1,15 @@
+{
+  "name": "teste-com-node-pt-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "bruno",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  }
+}
