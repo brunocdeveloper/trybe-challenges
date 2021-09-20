@@ -1,8 +1,9 @@
-
-const PESO = 75;
-const ALTURA = 1.78;
-
+const readline = require('readline-sync');
 
 const calculaIMC = (peso, altura) => (peso / Math.pow(altura, 2)).toFixed(2);
 
-console.log(calculaIMC(PESO, ALTURA));
+const peso = readline.questionFloat('Qual o seu peso? : ');
+const altura = readline.questionFloat('Qual a sua altura? : ');
+const imc = calculaIMC(peso, altura);
+
+console.log(`O seu imc é ${imc}`);
