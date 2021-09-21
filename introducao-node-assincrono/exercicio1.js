@@ -9,11 +9,20 @@ function calculo(a, b, c) {
 
   });
 
-
   return promise;
 };
 
-calculo(14, 2, 3)
+const numeroRandomico = () => {
+  return [
+    Math.floor(Math.random() * 100 +1),
+    Math.floor(Math.random() * 100 +1),
+    Math.floor(Math.random() * 100 +1)
+  ]
+};
+
+const numerosAleatorios = numeroRandomico();
+
+calculo(...numerosAleatorios)
   .then((result) => console.log(result))
   .catch((err) => console.log(err));
 
