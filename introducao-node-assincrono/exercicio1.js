@@ -4,13 +4,15 @@ function calculo(a, b, c) {
 
     const calculo = (a + b) *c;
 
-    resolve(calculo)
+    if(calculo < 50) reject('Valor muito baixo');
+    if(calculo > 50) resolve(calculo);
+
   });
 
 
   return promise;
 };
 
-calculo(2, 2, 3)
+calculo(14, 2, 3)
   .then((result) => console.log(result))
   .catch((err) => console.log(err));
