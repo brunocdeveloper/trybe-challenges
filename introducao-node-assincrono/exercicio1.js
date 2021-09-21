@@ -16,3 +16,11 @@ function calculo(a, b, c) {
 calculo(14, 2, 3)
   .then((result) => console.log(result))
   .catch((err) => console.log(err));
+
+calculo(14, 't', 3)
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
+
+calculo(15, 2, 3)
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
