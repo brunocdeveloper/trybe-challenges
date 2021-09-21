@@ -12,15 +12,14 @@ async function imprimePersonagem() {
 
 
 async function buscaPorId(idPersonagem) {
-  try {
-    const data = await fs.readFile('./simpsons.json', 'utf-8');
-    const dataP = JSON.parse(data);
-    const filtro = dataP.filter(({ id }) => id  == idPersonagem)
-    console.log(filtro);
-  } catch (err) {
-    console.error(`Id não encontrado: ${err}`);
-  };
+  const data = await fs.readFile('./simpsons.json', 'utf-8');
+  const dataP = JSON.parse(data);
+
+  const filtro = dataP.filter(({ id }) => id  == idPersonagem)
+  if(filtro.length == 0 ) throw new Error('Id não encontrado');
+ 
+  console.log(filtro);
 };
 
-buscaPorId(11);
+buscaPorId(5);
 
