@@ -1,0 +1,19 @@
+{
+  "name": "testes-em-node-parte-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tests.js",
+  "scripts": {
+    "test": "mocha test",
+    "escrever": "mocha testEscrever"
+  },
+  "author": "bruno",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  },
+  "dependencies": {
+    "sinon": "^11.1.2"
+  }
+}
