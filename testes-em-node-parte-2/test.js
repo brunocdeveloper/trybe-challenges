@@ -49,3 +49,14 @@ describe('Testa a função avaliaNumero', () => {
     });
   });
 });
+
+describe('Testa a função avaliaNumero', () => {
+  describe('Quando o valor digitado não for um número', () => {
+    describe('A resposta é', () => {
+      it('é igual a "o valor deve ser um número"', () => {
+        const resposta = avaliaNumero('t');
+        expect(resposta).to.be.equals('o valor deve ser um número');
+      });
+    });
+  });
+});
