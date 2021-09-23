@@ -1,6 +1,11 @@
+const fs = require('fs');
 const { expect } = require('chai');
+const sinon = require('sinon');
 const avaliacao = require('./exercicio1');
 const leArquivo = require('./leArquivo');
+
+const CONTEUDO_DO_ARQUIVO = 'bruno candido morais;';
+
 
 describe('Quando a média for menor que 7', () => {
   it('retorna "Reprovado"', () => {
@@ -26,15 +31,24 @@ describe('Quando a média for igual a 7', () => {
 
 describe('leArquivo', () => {
   describe('Quando o arquivo existe', () => {
+    before(() => {
+      sinon.stub(fs, 'readFileSync').returns(CONTEUDO_DO_ARQUIVO);
+
+    })
+
+    after(() => {
+      fs.readFileSync.restore();
+    })
+
     describe('A resposta', () => {
+      const retorno = leArquivo('arquivo.txt');
+
       it('é uma string', () => {
-        const retorno = leArquivo('arquivo.txt');
         expect(retorno).to.be.a('string');
       });
 
       it('é igual ao conteúdo do arquivo', () => {
-        const retorno = leArquivo('arquivo.txt');
-        expect(retorno).to.be.equals('bruno candido morais;');
+        expect(retorno).to.be.equals(CONTEUDO_DO_ARQUIVO);
       });
     });
   });
@@ -42,6 +56,17 @@ describe('leArquivo', () => {
 
 describe('leArquivo', () => {
   describe('Quando o arquivo não existe', () => {
+    before(() => {
+      sinon
+        .stub(fs, 'readFileSync')
+        .throws(new Error('Arquivo não encontrado'));
+    })
+
+    after(() => {
+      fs.readFileSync.restore();
+    })
+
+
     describe('A resposta', () => {
       it('é igual a null', () => {
         const retorno = leArquivo('arquivo_não_existente.txt');
