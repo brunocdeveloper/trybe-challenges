@@ -1,0 +1,11 @@
+{
+  "name": "testes-em-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculadora.js",
+  "scripts": {
+    "test": "mocha testes"
+  },
+  "author": "",
+  "license": "ISC"
+}
