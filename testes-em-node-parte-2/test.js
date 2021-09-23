@@ -60,3 +60,4 @@ describe('Testa a função avaliaNumero', () => {
     });
   });
 });
+
