@@ -11,8 +11,10 @@ const drinks = [
   { id: 6, name: 'Água Mineral 500 ml', price: 5.0 },
 ];
 
-app.get('/drinks', (req, res) => {
-  res.json(drinks);
+app.get('/drinks/search', (req, res) => {
+  const { name } = req.query;
+  const filteredDrinks = drinks.filter((d) => d.name.includes(name))
+  res.status(200).json(filteredDrinks);
 });
 
 app.listen(3001, () => {

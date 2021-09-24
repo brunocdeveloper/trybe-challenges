@@ -18,8 +18,8 @@ const recipes = [
 }); */
 
 app.get('/recipes/search', function (req, res) {
-  const { name, maxPrice } = req.query;
-  const filteredRecipes = recipes.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice));
+  const { name, maxPrice, minPrice } = req.query;
+  const filteredRecipes = recipes.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice) && r.price >= (minPrice));
   res.status(200).json(filteredRecipes);
 });
 
