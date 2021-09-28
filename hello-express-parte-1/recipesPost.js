@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(express.json());
+app.use(bodyParser.json());
 
 const recipes = [
   { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -10,13 +10,15 @@ const recipes = [
   { id: 3, name: 'Macarrão com molho branco', price: 35.0, waitTime: 25 },
 ];
 
+app.listen(3001, () => {
+  console.log('Aplicação ouvindo na porta 3001');
+});
 
 app.post('/recipes', function (req, res) {
   const { id, name, price } = req.body;
-  recipes.push({ id, name, price});
+  recipes.push( id, name, price);
   res.status(201).json({ message: 'Recipe created successfully!'});
 });
-
 
 fetch(`http://localhost:3001/recipes/`, {
   method: 'POST',
