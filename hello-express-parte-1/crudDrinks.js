@@ -45,3 +45,8 @@ app.delete('/drinks/:id', (req, res) => {
 app.get('/drinks/:id', (req, res) => {
   res.json(drinks);
 });
+
+
+app.all('*', function (req, res) {
+  return res.status(404).json({ message: `Rota '${req.path}' não existe!`});
+});
