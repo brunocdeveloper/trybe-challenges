@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const Author = require('./modelsMongo/Author');
+const Author = require('./services/Author');
 
 app.use(bodyParser.json());
 
@@ -25,10 +25,10 @@ app.get('/authors/:id', async (req, res) => {
 app.post('/authors', async (req, res) => {
   const { firstName, middleName, lastName } = req.body;
 
-  if(!Author.isValid(firstName, middleName, lastName)) return res.status(404).json({ message: 'Dados inválidos' });
+  const author = await Author.create(firstName, middleName, lastName);
 
-  await Author.create(firstName, middleName, lastName);
-
+  if(!author) return res.status(404).json({ message: 'Dados inválidos' });
+  
   res.status(201).json({ message: 'Author criado com sucesso '});
 });
 
