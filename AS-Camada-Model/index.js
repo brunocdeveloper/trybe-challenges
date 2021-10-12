@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const Author = require('./models/Author');
+const Author = require('./modelsMongo/Author');
 
 app.use(bodyParser.json());
 

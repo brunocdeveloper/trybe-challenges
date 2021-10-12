@@ -1,4 +1,4 @@
-const connection = require('./connections');
+const connection = require('../modelsMongo/connections');
 
 
 // cria um novo objeto/ remove vazio com o filter e concatena um nome inteiro com o join
