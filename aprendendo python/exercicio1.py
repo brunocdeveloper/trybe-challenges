@@ -1,4 +1,4 @@
-def greatNumber(numberOne, numberTwo):
+def biggerNumber(numberOne, numberTwo):
     if numberOne > numberTwo:
       return numberOne
     else:
