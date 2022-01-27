@@ -1,17 +1,7 @@
 import random
 
-
-WORDS = [
-  "cat",
-  "elephant",
-  "dog",
-  "monkey",
-  "duck",
-  "chameleon",
-  "bear",
-  "moose",
-  "rooster",
-]
+def retrieve_words(file):
+    return [word.strip() for word in file]
 
 MAX_ATTEMPTS = 3
 
@@ -35,7 +25,9 @@ def check_game_result(secret_word, guesses):
 
 
 if __name__ == "__main__":
-    secret_word, scrambled_word = draw_secret_word(WORDS)
+    with open("palavras.txt") as file:
+        words = retrieve_words(file)
+    secret_word, scrambled_word = draw_secret_word(words)
     print(f"Scrambled word is {scrambled_word}")
     guesses = collect_guesses()
     check_game_result(secret_word, guesses)
