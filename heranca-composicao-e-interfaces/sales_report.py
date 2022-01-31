@@ -24,3 +24,12 @@ class SalesReport():
         # Vamos gerar, aqui, o nosso relatório em formato JSON
         with open(self.export_file, 'w') as file:
             json.dump(self.build(), file)
+
+    def serialize_csv(self):
+        with open('meu_relatorio.csv', 'w') as file:
+            headers = ["Coluna 1", "Coluna 2", "Coluna 3"]
+            csv_writer = DictWriter(file, headers)
+            csv_writer.writeheader()
+            for item in self.build():
+                csv_writer.writerow(item)
+                  
