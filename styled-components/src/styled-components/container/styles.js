@@ -6,6 +6,8 @@ const height = '400';
 const ContainerWithButtons = styled.div`
   background-color: ${floralWhite};
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   width: 80%;
   margin: 20% auto;
   height: ${height}px;
