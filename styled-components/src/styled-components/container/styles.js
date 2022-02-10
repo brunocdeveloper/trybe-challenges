@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 const floralWhite = '#FFF8F0';
 const height = '400';
@@ -21,4 +21,14 @@ const ContainerWithButtons = styled.div`
   }
 `;
 
-export default ContainerWithButtons;
+const GlobalStyle = createGlobalStyle`
+  * {
+    background-color: #E7D2CC;
+  }
+`
+
+export  {
+  ContainerWithButtons,
+  GlobalStyle
+}
+  
